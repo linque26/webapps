@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<SCRIPT LANGUAGE ="JavaScript"  type="text/javascript">
+ 
+ var pop;
+ 
+  function saludo() {
+	 var nom;
+	 nom = prompt("hola escribe tu nombre", "");
+	 alert("Hola mucho gusto :"+nom);
+  }
+  
+ function confirmar() {
+  return confirm("Quieres confirmar?");
+ }
+ 
+ function abrir_ventana() {
+  window.open("http://www.starwars.com/");
+ }
+ function stop_abrir() {
+  clearTimeout(pop);
+ }
+ function start_abrir() {
+  pop = setInterval(abrir_ventana(), 30);
+ }
+</SCRIPT>
+
+</head>
+<body>
+  <p>Ejmplo 2</p>
+  <input type="button" value="Atrás" onclick="history.go(-1)">
+  <input type="button" value="Saludar" onclick="saludo();">
+  <input type="button" value="Abrir PopUp" onclick="start_abrir();">
+  <input type="button" value="Cerrar PopUp" onclick="stop_abrir();">
+  <a href="http://www.starwars.com/" onclick="javascript:return confirmar();">Ir startWars</a> 
+</body>
+</html>
